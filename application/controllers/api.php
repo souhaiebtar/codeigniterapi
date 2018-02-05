@@ -17,7 +17,7 @@ class Api extends REST_Controller {
 			$this->response(array('status' => 'success', 'message' => $student[$id]));
 		}
 		else {
-			$this->response(array('status' => 'failure', 'message' => 'The specified student could not be found'));
+			$this->response(array('status' => 'failure', 'message' => 'The specified student could not be found', REST_Controller::HTTP_NOT_FOUND));
 		}
 	}
 }
